@@ -1,0 +1,10 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p><%= @task.completed %></p>
+
+<%= link_to "Back to My tasks", tasks_path %>
+<%= link_to "Edit my task", edit_task_path(@task) %>
+<%= link_to "Delete", task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are sure you?"}%>
+
+<%# <p><%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
+<%# <p><%= link_to 'Delete', restaurant_path(@restaurant), data: {turbo_method: :delete, turbo_confirm: "Are sure you?"} %>
